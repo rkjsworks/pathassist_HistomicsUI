@@ -82,7 +82,8 @@ var ZoomWidget = Panel.extend({
             value: Math.log2(value) - Math.log2(this._maxMag),
             disabled: !this.renderer,
             buttons: buttons,
-            collapsed: this.$('.s-panel-content.collapse').length && !this.$('.s-panel-content').hasClass('in')
+            collapsed : true
+            //collapsed: this.$('.s-panel-content.collapse').length && !this.$('.s-panel-content').hasClass('in')
         }));
 
         // enable or disable zoom range buttons

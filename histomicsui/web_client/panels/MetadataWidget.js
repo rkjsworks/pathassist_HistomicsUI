@@ -572,8 +572,9 @@ var MetadataWidget = Panel.extend({
                     accessLevel: this.item.attributes._accessLevel,
                     AccessType: AccessType,
                     panel: this.panel,
+                    collapsed : true
                     // if never rendered, the jquery selector will be empty and won't be visible
-                    collapsed: this.panel && !this.$('.s-panel-content').hasClass('in') && !this.$el.closest('.s-panel').hasClass('h-panel-maximized')
+                    //collapsed: this.panel && !this.$('.s-panel-content').hasClass('in') && !this.$el.closest('.s-panel').hasClass('h-panel-maximized')
                 }));
                 // Append each metadatum
                 _.each(metaKeys, function (metaKey) {

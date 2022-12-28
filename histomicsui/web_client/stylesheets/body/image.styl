@@ -39,13 +39,19 @@
 
   .h-panel-group-right
     overflow-y auto
-    width 300px
+    width 50px
     right 0
     padding-bottom 5px
+    height: 100%;
+    background: #fff;
 
     .s-panel
-      margin-right 5px
-
+      margin-right 0px
+      .custom-panel-title
+        display none
+      .s-panel-controls
+        display none
+    
 #h-annotation-context-menu
   position absolute
   z-index 1000
@@ -59,3 +65,4 @@
 
 .geojs-map
   outline none
+
