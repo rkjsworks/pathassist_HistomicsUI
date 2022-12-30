@@ -34,6 +34,7 @@ import router from '../../router';
 import events from '../../events';
 import { HuiSettings } from '../utils';
 import View from '../View';
+import PanelThumbnailsView from '../layout/PanelThumbnailsView'
 
 import imageTemplate from '../../templates/body/image.pug';
 import '../../stylesheets/body/image.styl';
@@ -106,6 +107,9 @@ var ImageView = View.extend({
         this.pixelmapContextMenu = new PixelmapContextMenu({
             parentView: this
         });
+        this.panelThumbnailsView = new PanelThumbnailsView({
+            parentView : this
+        })
         this.listenTo(this, 'h:styleGroupsEdited', () => {
             this.contextMenu.refetchStyles();
             this.pixelmapContextMenu.refetchStyles();
@@ -283,6 +287,10 @@ var ImageView = View.extend({
                 this.annotationSelector
                     .setViewer(this.viewerWidget)
                     .setElement('.h-annotation-selector').render();
+
+                this.panelThumbnailsView
+                    .setViewer(this.viewerWidget)
+                    .setElement('.h-panel-container').render();
 
                 if (this.drawWidget) {
                     this.$('.h-draw-widget').removeClass('hidden');
