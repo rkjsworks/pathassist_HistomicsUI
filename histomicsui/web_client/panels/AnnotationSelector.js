@@ -90,8 +90,7 @@ var AnnotationSelector = Panel.extend({
                 expandedGroups: this._expandedGroups,
                 annotationGroups,
                 annotationAccess: this._annotationAccess,
-                collapsed : true
-                //collapsed: this.$('.s-panel-content.collapse').length && !this.$('.s-panel-content').hasClass('in'),
+                collapsed: this.$('.s-panel-content.collapse').length && !this.$('.s-panel-content').hasClass('in'),
                 
             }));
             this._changeGlobalOpacity();

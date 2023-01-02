@@ -5,7 +5,10 @@ import '../../stylesheets/layout/panelThumbnails.styl';
 
 var PanelThumbnailsView = View.extend({
     events: {
-        'click .h-show-overview-item': '_showHideComponent'
+        'click .h-show-overview-item': '_showHideComponent',
+        'click .h-show-zoom-item': '_showHideComponent',
+        'click .h-show-Metadata-item': '_showHideComponent',
+        'click .h-show-annotation-item': '_showHideComponent'
     },
 
     initialize(params) {
@@ -27,9 +30,17 @@ var PanelThumbnailsView = View.extend({
     },
 
     _showHideComponent(evt) {
-        evt.preventDefault();
-        this.parentView.$('.h-overview-widget').toggleClass('hidden');
-        
+        evt.preventDefault();      
+        this._hidecomponents();
+        const cls = $(evt.currentTarget).data('id');
+        this.parentView.$(`.${cls}`).toggleClass('hidden');
+    },
+
+    _hidecomponents() {
+        const compList = ['.h-overview-widget','.h-zoom-widget','.h-metadata-widget','.h-annotation-selector'];
+        compList.forEach(function(cls){
+        $(cls).addClass('hidden');                        
+        })
         
     }
 });
