@@ -37,7 +37,7 @@ var PanelThumbnailsView = View.extend({
     },
 
     _hidecomponents() {
-        const compList = ['.h-overview-widget','.h-zoom-widget','.h-metadata-widget','.h-annotation-selector'];
+        const compList = ['.h-overview-widget','.h-zoom-widget','.h-metadata-widget','.h-annotation-selector', '.h-draw-widget'];
         compList.forEach(function(cls){
         $(cls).addClass('hidden');                        
         })

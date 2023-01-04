@@ -1112,6 +1112,7 @@ var ImageView = View.extend({
             }).render();
             this.listenTo(this.drawWidget, 'h:redraw', this._redrawAnnotation);
             this.listenTo(this.drawWidget, 'h:styleGroupsUpdated', this._updatePixelmapsWithCategories);
+            this.$('.h-draw-widget').addClass('h-thumbnail-widget');
             this.$('.h-draw-widget').removeClass('hidden');
         }
     },
