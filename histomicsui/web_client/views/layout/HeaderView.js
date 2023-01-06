@@ -20,6 +20,7 @@ var HeaderView = View.extend({
     },
 
     render() {
+       
         this.$el.html(headerTemplate({
             brandName: this.settings.brandName,
             brandColor: this.settings.brandColor,

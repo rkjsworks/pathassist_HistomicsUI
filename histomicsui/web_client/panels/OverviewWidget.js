@@ -12,11 +12,12 @@ var OverviewWidget = Panel.extend({
     render() {
         this.$el.html(overviewWidget({
             id: 'overview-panel-container',
-            collapsed: this.$('.s-panel-content.collapse').length && !this.$('.s-panel-content').hasClass('in')
+            collapsed: this.$('.s-panel-content.collapse').length && this.$('.s-panel-content').hasClass('in')
         }));
         window.setTimeout(() => {
             this._createOverview();
         }, 1);
+        
         return this;
     },
 

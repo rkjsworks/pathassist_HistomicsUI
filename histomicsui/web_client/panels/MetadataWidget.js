@@ -571,7 +571,7 @@ var MetadataWidget = Panel.extend({
                     firstValue: firstValue,
                     accessLevel: this.item.attributes._accessLevel,
                     AccessType: AccessType,
-                    panel: this.panel,
+                    panel: this.panel,                   
                     // if never rendered, the jquery selector will be empty and won't be visible
                     collapsed: this.panel && !this.$('.s-panel-content').hasClass('in') && !this.$el.closest('.s-panel').hasClass('h-panel-maximized')
                 }));

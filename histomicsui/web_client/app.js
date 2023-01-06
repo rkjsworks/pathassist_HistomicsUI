@@ -22,9 +22,9 @@ var App = GirderApp.extend({
         return GirderApp.prototype.initialize.apply(this, arguments);
     },
 
-    render() {
+    render() {        
         this.$el.html(layoutTemplate());
-
+       
         this.huiHeader = new HeaderView({
             el: this.$('#g-app-header-container'),
             parentView: this,
